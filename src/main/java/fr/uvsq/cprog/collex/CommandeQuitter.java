@@ -3,6 +3,6 @@ package fr.uvsq.cprog.collex;
 public class CommandeQuitter implements Commande {
     @Override
     public String execute() {
-        return "Fin de l'application.";
+        return "Fin";
     }
 }

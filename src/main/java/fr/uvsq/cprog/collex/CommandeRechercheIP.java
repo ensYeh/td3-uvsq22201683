@@ -3,15 +3,15 @@ package fr.uvsq.cprog.collex;
 
 public class CommandeRechercheIP implements Commande {
     private Dns dns;
-    private AdresseIP ip;
+    private NomMachine nom;
 
-    public CommandeRechercheIP(Dns dns, AdresseIP ip) {
+    public CommandeRechercheIP(Dns dns, NomMachine nom) {
         this.dns = dns;
-        this.ip = ip;
+        this.nom = nom;
     }
 
     @Override
     public String execute() throws Exception {
-        return dns.getItem(ip).toString();
+        return dns.getItem(nom).getIp().toString();
     }
 }
